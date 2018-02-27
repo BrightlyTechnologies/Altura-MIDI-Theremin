@@ -5,9 +5,10 @@ To get the latest release onto your altura
 1. Obtain and setup avrdude. (See detailed instructions in the Macchiato README.)
 2. Download Altura_[version number].ino.hex. Always use the latest release!
 3. Move Altura_[version number].ino.hex into the same folder as avrdude.exe and avrdude.conf
-4. Connect your Altura to your computer through a usbtiny programmer. Your computer should recognize the programmer as a USB device when you plug it into the computer. If it does not, you may need to install the driver, called libusb. See details in the Macchiato README.
-5. Open up a command prompt and navigate to the folder where you have avrdude.exe.
-6. Enter this command: "avrdude -c usbtiny -p m328p -B 1 -V -U flash:w:Altura_[version number].ino.hex" If you copy-and-paste this line, be careful to edit the file name to exactly match the name of your hex file!
+4. Connect your usbtiny programmer to your computer: just plug it in to any available USB port. Your computer should recognize the programmer as a new USB device. If it does not, you may need to install the driver, called libusb. See details in the Macchiato README.
+5. Plug the usbTiny programmer into the Altura ISP header, a cluster of six pins near the right side of the circuit board. When oriented correctly, the Altura's LED and display will light. 
+6. Open up a command prompt and navigate to the folder where you have avrdude.exe.
+7. Enter this command: "avrdude -c usbtiny -p m328p -B 1 -V -U flash:w:Altura_[version number].ino.hex" If you copy-and-paste this line, be careful to edit the file name to exactly match the name of your hex file!
 
 To make custom edits to the source code.
 1. Obtain and setup the latest version of the Arduino IDE.
